@@ -1,0 +1,15 @@
+{
+  "name": "lambda-fnc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.865.0",
+    "axios": "^0.21.1"
+  }
+}
