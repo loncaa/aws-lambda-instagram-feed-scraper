@@ -1,7 +1,8 @@
 # aws-lambda-instagram-feed-scraper
 
-# S3 CORS Configuration
+## S3 CORS Configuration
 
+```
 [
     {
         "AllowedHeaders": [
@@ -17,3 +18,4 @@
         "MaxAgeSeconds": 3000
     }
 ]
+```
