@@ -19,7 +19,7 @@ function uploadFileToS3(uploadParams){
 function generateS3Payload(bufferedData){
     return {
         Bucket: process.env['BUCKET_NAME'],
-        Key: 'nikbenfeed.json',
+        Key: process.env['BUCKET_OBJECT'],
         ACL: 'public-read',
         Body: bufferedData,
         ContentType: 'application/json',
