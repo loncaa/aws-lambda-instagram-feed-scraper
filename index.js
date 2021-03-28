@@ -16,7 +16,9 @@ function uploadFileToS3(uploadParams){
     })
 }
 
-function generateS3Payload(bufferedData){
+function generateS3Payload(payload){
+    var bufferedData = Buffer.from(JSON.stringify(payload));
+
     return {
         Bucket: process.env['BUCKET_NAME'],
         Key: process.env['BUCKET_OBJECT'],
@@ -36,10 +38,8 @@ exports.handler = async (event, _) => {
     const response = await axios.get(requestURL)
     .then(async response => {
         const media = response.data;
-        var buf = Buffer.from(JSON.stringify(media));
-
-        const uploadParams = generateS3Payload(buf);
-        const result = await uploadFileToS3(uploadParams);
+        const uploadPayload = generateS3Payload(media);
+        const result = await uploadFileToS3(uploadPayload);
 
         return {
             statusCode: 200,
