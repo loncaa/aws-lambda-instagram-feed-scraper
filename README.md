@@ -1,6 +1,7 @@
-# aws-lambda-instagram-feed-scraper
+# AWS Lambda - Instagram Feed Scraper
+Proxy server for fetching user Instagram feed data.  
 
-## S3 CORS Configuration
+## S3 CORS Configuration Notes
 
 ```
 [
